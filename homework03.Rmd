@@ -1,0 +1,48 @@
+---
+title: "practice1-zwillens"
+Author: Zach Willens
+output: html_document
+date: "2023-02-13"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown g
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+
+## Including Plots
+# 1. Finish the in-class practice in Slides 3-12 in "Lecture 2-2-Practice for git", link: https://yumouqiu.github.io/DS202-Spring2023/Practice/practice01.html  
+    a. Download the RMarkdown file with these homework instructions to use as a template for your work. Make sure to replace "Your Name" with your name.  
+    b. In the RMarkdown file, write down table of team members, and their github repository links;   
+the number of successful pull requests you made, and the github repository to which you requested a change;  
+the number of pull requests you accepted, and the github repository from which you accepted.  
+    c. Write down a list with at least 3 tips of how to make working with git/github easier
+    1. Practice with a mock or fake example with the pulling and pushing you will have to do for the real project
+    2. Fork your partner's repository to make working together easier and quicker
+    3. Connect your RStudio with git to make pushing as easy as a click of a button
+You can also embed plots, for example:
+# Question 2: Generate the graph of LifExp vs. gdpPercap for US, Canada, Aussie's
+```{r}
+library(ggplot2)
+gap <- read.csv("gapminder-5060.csv")
+country.subset = c("Canada")
+us_only = gap[gap$country %in% country.subset, ]
+ggplot(data = us_only, aes(x = lifeExp, y = gdpPercap)) + geom_point(aes(color = country, size = pop))
+```
+
+
+3. Write a paragraph (~200 words) describing an example of what you consider data science. Write your paragraph in R Markdown. Include at least 
+    a. one link to a chart or an image and 
+    b. at least one itemized or enumerated list.
+
+Something I consider data science is recruiting with sports. In the future, I would like to be some sort of sports scout, so using statistics through data science could help find more than just players who stand out on the field, but also stand out with their combine statistics showing how one can have a higher ceiling. Something specific that I saw recently, during the Kansas City Cheifs championship parade, linebacker Leo Chenal leaped from the street level to the top level of the double-decker bus. While this player is a superbowl champion, he is not stand out on the field. Seeing his chart from the combine, we can see that he had a 9.99 athletic rating. 
+Chart : https://twitter.com/MathBomb/status/1500464881442635779?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1500464881442635779%7Ctwgr%5Ea9954034ed4ebf9dd0c3ee5f24b42a3dd2727ffe%7Ctwcon%5Es1_&ref_url=https%3A%2F%2Fbadgerswire.usatoday.com%2F2022%2F03%2F06%2Fbadgers-linebacker-leo-chenal-is-turning-heads-at-the-nfl-combine%2F 
+
+
+
